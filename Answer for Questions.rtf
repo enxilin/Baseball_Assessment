@@ -1,0 +1,38 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red194\green126\blue101;\red0\green0\blue0;
+\red193\green193\blue193;\red89\green138\blue67;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c100000\c100000;\cssrgb\c80784\c56863\c47059;\cssrgb\c0\c0\c0;
+\cssrgb\c80000\c80000\c80000;\cssrgb\c41569\c60000\c33333;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\cb2 Q1.\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 The output file name: 
+\f1 \cf4 PredictionsChance_log.csv is for logistic model\
+PredictionsChance_random.csv\cf5 \cb1 \strokec5 .
+\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 is
+\f1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5  \cf4 \cb2 \strokec3 for random \strokec6 Random Forest
+\f0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+I write it in python\
+\
+Q2. \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 I used logistic regression since it\'92s a simple binary classification model. I considered the four variables as features to predict the likelihood of a pitch being put in play. First I cleaned the data, removed the nan value and check the distributions of variables. Second I established the model and tested it on the deploy dataset. Third, I return the possibilities of class 1 instead of 0/1. Since we have not figure out the thresholded. Additionally, I use random forest model to see if they improve the prediction. I use the grid search with cross validation to find the best hyperparamters.\
+\
+\
+Q3. \
+Higher velocity and IndecedVerBreak make it slightly harder for batter to put the ball in play. While increased HorzBreak make it slightly easier. Spin rate has a negligible effect since the coefficient is too small.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 coefficient from my model:-0.00217874 -0.00023124  0.01507367 -0.02962609\
+Correlation matrix:\
+                    InPlay      Velo          SpinRate     HorzBreak      InducedVertBreak\
+InPlay          1.000000 -0.052441 -0.065993   0.072993         -0.093791\
+\
+Q4. \
+If I had another week, I will evaluate the logistic regression model and figure out the appropriate threshold using confusion matrix. Secondly, I will consider using some other models beta-binomial model, K-Nearest Neighbors, Decision Trees to see if they improve the prediction accuracy. Additionally, I\'92d like to include more features such as batter\'92s statistics.}
